@@ -1,14 +1,21 @@
 import 'package:first_app/centered.dart';
+import 'package:first_app/dice_roller.dart';
 import 'package:flutter/material.dart';
 
 class GradientContainer extends StatelessWidget {
-  GradientContainer(this.startAlignment, this.endAlignment,{super.key});
+  GradientContainer(this.startAlignment, this.endAlignment, {super.key});
   Alignment startAlignment;
   Alignment endAlignment;
   @override
   Widget build(BuildContext context) {
+    var activeDiceImage = 'assets/images/dice-2.png';
+    void rollDice() {
+      activeDiceImage = 'assets/images/dice-4.png';
+      print("Rolling the dice");
+    }
+
     return Container(
-      decoration:  BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: startAlignment,
           end: endAlignment,
@@ -18,11 +25,8 @@ class GradientContainer extends StatelessWidget {
           ],
         ),
       ),
-      child: Center(
-        child: Image.asset(
-          'assets/images/dice-2.png',
-          width: 200,
-        ),
+      child: const Center(
+        child: DiceRoller(),
       ),
     );
   }
