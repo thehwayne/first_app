@@ -9,6 +9,7 @@ class DiceRoller extends StatefulWidget {
   }
 }
 
+
 class _DiceRollerState extends State<DiceRoller> {
   var currentDiceRoll = 2;
   void rollDice() {
@@ -17,6 +18,7 @@ class _DiceRollerState extends State<DiceRoller> {
     });
     print('Rolling dice...');
   }
+
 
   @override
   Widget build(context) {

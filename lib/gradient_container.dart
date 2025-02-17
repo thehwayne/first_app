@@ -7,6 +7,7 @@ class GradientContainer extends StatelessWidget {
   GradientContainer(this.startAlignment, this.endAlignment, {super.key});
   Alignment startAlignment;
   Alignment endAlignment;
+  
   @override
   Widget build(BuildContext context) {
     var activeDiceImage = 'assets/images/dice-2.png';
