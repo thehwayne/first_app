@@ -2,6 +2,7 @@ import 'package:first_app/centered.dart';
 import 'package:first_app/dice_roller.dart';
 import 'package:flutter/material.dart';
 
+
 class GradientContainer extends StatelessWidget {
   GradientContainer(this.startAlignment, this.endAlignment, {super.key});
   Alignment startAlignment;
@@ -13,6 +14,7 @@ class GradientContainer extends StatelessWidget {
       activeDiceImage = 'assets/images/dice-4.png';
       print("Rolling the dice");
     }
+
 
     return Container(
       decoration: BoxDecoration(
